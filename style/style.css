@@ -1,29 +1,34 @@
-* {
+/* Reset + base layout */
+html, body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: 'Inter', sans-serif;
+  width: 100%;
+  height: 100%;
 }
 
 body {
-  background-color: #f4f2f6;
-  display: flex;
-  justify-content: center;
-  padding: 40px;
+  background: #f2f2f2;
 }
 
+/* Full screen app container */
 .app {
-  background-color: #fff;
-  max-width: 1080px;
-  width: 100%;
+  background: white;
+  width: 100vw;
+  height: 100vh;
   padding: 40px 60px;
-  border-radius: 8px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
 }
 
+/* Header */
 header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 30px;
 }
 
 .logo {
@@ -31,13 +36,15 @@ header {
   font-size: 1.2rem;
 }
 
-nav {
+nav ul {
   display: flex;
   gap: 20px;
+  list-style: none;
   font-weight: 500;
+  padding-left: 0;
 }
 
-.profile-area {
+.right {
   display: flex;
   align-items: center;
   gap: 20px;
@@ -46,59 +53,77 @@ nav {
 .progress {
   display: flex;
   align-items: center;
+  gap: 10px;
   font-size: 0.8rem;
-  background: #f6f6f6;
-  border-radius: 8px;
-  padding: 4px 10px;
+}
+
+.progress-info {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.progress-score {
+  color: green;
+  font-weight: 600;
 }
 
 .progress-bar {
+  width: 70px;
   height: 6px;
-  width: 60px;
-  background-color: #e74c3c;
+  background: #eee;
   border-radius: 4px;
-  margin-left: 6px;
+  overflow: hidden;
   position: relative;
 }
 
-.progress-bar::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
+.progress-fill {
   width: 24%;
-  background-color: #27ae60;
-  border-radius: 4px;
+  height: 100%;
+  background: #27ae60;
+}
+
+.progress-icon {
+  font-size: 1.1rem;
 }
 
 .avatar {
   border-radius: 50%;
 }
 
-.text-content h1 {
-  font-size: 2.5rem;
-  font-weight: 800;
-  margin: 40px 0 20px;
-}
-
-.main {
-  margin-top: 30px;
-  display: flex;
-  gap: 20px;
-  flex-wrap: wrap;
-}
-
-.hero {
+/* Main content */
+main {
   flex: 1;
-  min-width: 300px;
-  background: #e2edf0;
-  border-radius: 16px;
-  padding: 40px;
   display: flex;
   flex-direction: column;
-  align-items: center;
+}
+
+main h1 {
+  font-size: 2.6rem;
+  font-weight: 800;
+  margin: 40px 0 30px;
+}
+
+/* Layout container for hero + cards */
+.content {
+  display: flex;
+  gap: 20px;
+  flex: 1;
+  flex-wrap: nowrap;
+  align-items: stretch;
+}
+
+/* Hero section */
+.hero {
+  flex: 2;
+  background: #e3efed;
+  border-radius: 20px;
+  padding: 40px;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-width: 300px;
 }
 
 .hero img {
@@ -111,22 +136,22 @@ nav {
   font-weight: 600;
 }
 
-.card {
-  flex: 1;
-  min-width: 250px;
-  padding: 30px;
-  border-radius: 16px;
+/* Cards section */
+.cards {
+  flex: 1.5;
   display: flex;
   flex-direction: column;
+  gap: 20px;
+  min-width: 280px;
+}
+
+.card {
+  flex: 1;
+  border-radius: 16px;
+  padding: 30px;
+  display: flex;
   justify-content: space-between;
-}
-
-.card.blue {
-  background: #e9edfe;
-}
-
-.card.pink {
-  background: #faeaea;
+  align-items: flex-end;
 }
 
 .card h3 {
@@ -137,18 +162,24 @@ nav {
 
 .card p {
   font-size: 0.9rem;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 
-.card .action {
+.card a {
   font-weight: 600;
-  font-size: 0.95rem;
-  display: flex;
-  align-items: center;
-  gap: 5px;
+  text-decoration: none;
+  color: black;
 }
 
 .card img {
-  align-self: flex-end;
-  max-width: 60px;
+  max-width: 70px;
+  height: auto;
+}
+
+.card.blue {
+  background: #e9edfe;
+}
+
+.card.pink {
+  background: #faeaea;
 }

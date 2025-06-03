@@ -10,50 +10,59 @@
 <body>
   <div class="app">
     <header>
-      <div class="logo">MINDZY</div>
+      <div class="left">
+        <div class="logo">MINDZY</div>
+      </div>
       <nav>
-        <div>Games</div>
-        <div>Challenges</div>
-        <div>Progress</div>
-        <div>Library</div>
-        <div>Support</div>
+        <ul>
+          <li>Games</li>
+          <li>Challenges</li>
+          <li>Progress</li>
+          <li>Library</li>
+          <li>Support</li>
+        </ul>
       </nav>
-      <div class="profile-area">
+      <div class="right">
         <div class="progress">
-          Day 3
-          <div class="progress-bar"></div>
+          <div class="progress-info">
+            <span>Day 3</span>
+            <span class="progress-score">24/100</span>
+          </div>
+          <div class="progress-bar">
+            <div class="progress-fill"></div>
+          </div>
+          <div class="progress-icon">🔄</div>
         </div>
-        <img src="https://i.pravatar.cc/32" alt="User" class="avatar">
+        <img src="https://i.pravatar.cc/32" alt="Profile" class="avatar">
       </div>
     </header>
 
-    <div class="text-content">
-      <h1>Build a Sharper Mind,<br/>the Fun Way!</h1>
-    </div>
-
-    <div class="main">
-      <div class="hero">
-        <img src="https://i.imgur.com/yW2W9SC.png" alt="Sheep Image"/>
-        <p>Tap to Begin →</p>
-      </div>
-
-      <div class="card blue">
-        <div>
-          <h3>Focus through reading</h3>
-          <p>Gentle reading for better focus</p>
-          <div class="action">Let’s Go! →</div>
+    <main>
+      <h1>Build a Sharper Mind,<br>the Fun Way!</h1>
+      <div class="content">
+        <div class="hero">
+          <img src="image/sheep.png" alt="Sheep">
+          <p>Tap to Begin →</p>
         </div>
-        <img src="https://i.imgur.com/xP5CksX.png" alt="Reading Character">
-      </div>
-
-      <div class="card pink">
-        <div>
-          <h3>Your brain learns as you scroll</h3>
-          <div class="action">Let’s Go! →</div>
+        <div class="cards">
+          <div class="card blue">
+            <div>
+              <h3>Focus through reading</h3>
+              <p>Gentle reading for better focus</p>
+              <a href="#">Let’s Go! →</a>
+            </div>
+            <img src="https://i.imgur.com/xP5CksX.png" alt="Reading character">
+          </div>
+          <div class="card pink">
+            <div>
+              <h3>Your brain learns as you scroll</h3>
+              <a href="#">Let’s Go! →</a>
+            </div>
+            <img src="https://i.imgur.com/nLuCy9B.png" alt="Scrolling character">
+          </div>
         </div>
-        <img src="https://i.imgur.com/nLuCy9B.png" alt="Scrolling Character">
       </div>
-    </div>
+    </main>
   </div>
 </body>
 </html>
