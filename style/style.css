@@ -2,112 +2,153 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Segoe UI', sans-serif;
+  font-family: 'Inter', sans-serif;
 }
 
 body {
-  background-color: #f9f9f9;
-  color: #111;
-  padding: 20px;
+  background-color: #f4f2f6;
+  display: flex;
+  justify-content: center;
+  padding: 40px;
 }
 
-.navbar {
+.app {
+  background-color: #fff;
+  max-width: 1080px;
+  width: 100%;
+  padding: 40px 60px;
+  border-radius: 8px;
+}
+
+header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 40px;
 }
 
 .logo {
-  font-weight: bold;
-  font-size: 24px;
+  font-weight: 800;
+  font-size: 1.2rem;
 }
 
-nav a {
-  margin: 0 10px;
-  text-decoration: none;
-  color: #333;
+nav {
+  display: flex;
+  gap: 20px;
+  font-weight: 500;
 }
 
-.profile {
+.profile-area {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 20px;
+}
+
+.progress {
+  display: flex;
+  align-items: center;
+  font-size: 0.8rem;
+  background: #f6f6f6;
+  border-radius: 8px;
+  padding: 4px 10px;
 }
 
 .progress-bar {
-  width: 80px;
-  height: 8px;
-  background-color: #eee;
-  border-radius: 5px;
-  overflow: hidden;
+  height: 6px;
+  width: 60px;
+  background-color: #e74c3c;
+  border-radius: 4px;
+  margin-left: 6px;
+  position: relative;
 }
 
-.progress-fill {
+.progress-bar::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
   height: 100%;
-  background-color: #fa5252;
+  width: 24%;
+  background-color: #27ae60;
+  border-radius: 4px;
 }
 
 .avatar {
   border-radius: 50%;
-  width: 32px;
-  height: 32px;
 }
 
-.main-content {
-  display: grid;
-  grid-template-columns: 2fr 1fr;
-  gap: 30px;
+.text-content h1 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin: 40px 0 20px;
 }
 
-.intro h1 {
-  font-size: 36px;
-  margin-bottom: 20px;
+.main {
+  margin-top: 30px;
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
 }
 
-.main-card {
-  background: rgb(17, 11, 11);
-  padding: 20px;
-  border-radius: 20px;
-  text-align: center;
-  box-shadow: 0 0 10px rgba(0,0,0,0.05);
-}
-
-.main-card button {
-  margin-top: 15px;
-  padding: 10px 20px;
-  background-color: #111;
-  color: white;
-  border: none;
-  border-radius: 10px;
-  cursor: pointer;
-}
-
-.cards {
+.hero {
+  flex: 1;
+  min-width: 300px;
+  background: #e2edf0;
+  border-radius: 16px;
+  padding: 40px;
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  align-items: center;
+  text-align: center;
+}
+
+.hero img {
+  max-width: 100%;
+  height: auto;
+}
+
+.hero p {
+  margin-top: 20px;
+  font-weight: 600;
 }
 
 .card {
-  border-radius: 20px;
-  padding: 20px;
-  color: #333;
-  box-shadow: 0 0 10px rgba(0,0,0,0.05);
+  flex: 1;
+  min-width: 250px;
+  padding: 30px;
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
-.card.purple {
-  background-color: #e0e7ff;
+.card.blue {
+  background: #e9edfe;
 }
 
 .card.pink {
-  background-color: #ffe0e0;
+  background: #faeaea;
 }
 
-.card a {
-  display: inline-block;
-  margin-top: 10px;
-  color: #000;
-  text-decoration: none;
-  font-weight: bold;
+.card h3 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.card p {
+  font-size: 0.9rem;
+  margin-bottom: 20px;
+}
+
+.card .action {
+  font-weight: 600;
+  font-size: 0.95rem;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.card img {
+  align-self: flex-end;
+  max-width: 60px;
 }
